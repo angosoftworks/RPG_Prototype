@@ -104,6 +104,7 @@
 ***
 
 * [BP\_SpawnManager](bp_spawnmanager.md)
+* [BP\_SpawnZone](bp_spawnzone.md)
 
 ## Concepts
 
