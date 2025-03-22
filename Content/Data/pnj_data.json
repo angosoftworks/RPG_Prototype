@@ -1,0 +1,141 @@
+{
+    "pnj_list": [
+        {
+            "name": "Alrik",
+            "profession": "Forgeron",
+            "clan": "Clan Marteau",
+            "traits": {
+                "ambition": 6,
+                "loyalty": 8,
+                "sociability": 4
+            },
+            "relations": {
+                "Bjorn": 6,
+                "Cedric": -4,
+                "Runa": 8
+            }
+        },
+        {
+            "name": "Bjorn",
+            "profession": "Fermier",
+            "clan": "Clan Brume",
+            "traits": {
+                "ambition": 4,
+                "loyalty": 7,
+                "sociability": 7
+            },
+            "relations": {
+                "Alrik": 6,
+                "Helga": 8
+            }
+        },
+        {
+            "name": "Helga",
+            "profession": "Taverni\u00e8re",
+            "clan": "Clan Brume",
+            "traits": {
+                "ambition": 5,
+                "loyalty": 6,
+                "sociability": 9
+            },
+            "relations": {
+                "Bjorn": 8,
+                "Ingrid": -3
+            }
+        },
+        {
+            "name": "Ingrid",
+            "profession": "Apothicaire",
+            "clan": "Ind\u00e9pendante",
+            "traits": {
+                "ambition": 7,
+                "loyalty": 5,
+                "sociability": 3
+            },
+            "relations": {
+                "Cedric": 5,
+                "Helga": -3
+            }
+        },
+        {
+            "name": "Cedric",
+            "profession": "Garde",
+            "clan": "Clan Marteau",
+            "traits": {
+                "ambition": 5,
+                "loyalty": 9,
+                "sociability": 5
+            },
+            "relations": {
+                "Alrik": -4,
+                "Ingrid": 5
+            }
+        },
+        {
+            "name": "Edda",
+            "profession": "Pr\u00eatresse",
+            "clan": "Clan Lumi\u00e8re",
+            "traits": {
+                "ambition": 2,
+                "loyalty": 10,
+                "sociability": 6
+            },
+            "relations": {}
+        },
+        {
+            "name": "Olaf",
+            "profession": "Marchand",
+            "clan": "Clan Brume",
+            "traits": {
+                "ambition": 9,
+                "loyalty": 4,
+                "sociability": 6
+            },
+            "relations": {
+                "Helga": 4,
+                "Cedric": -2
+            }
+        },
+        {
+            "name": "Sigrid",
+            "profession": "Vagabonde",
+            "clan": "Sans clan",
+            "traits": {
+                "ambition": 8,
+                "loyalty": 3,
+                "sociability": 7
+            },
+            "relations": {
+                "Ingrid": -2
+            }
+        },
+        {
+            "name": "Gunnar",
+            "profession": "Fermier",
+            "clan": "Clan Marteau",
+            "traits": {
+                "ambition": 4,
+                "loyalty": 6,
+                "sociability": 4
+            },
+            "relations": {
+                "Cedric": 5,
+                "Olaf": -3
+            }
+        },
+        {
+            "name": "Runa",
+            "profession": "Forgeronne",
+            "clan": "Clan Marteau",
+            "traits": {
+                "ambition": 7,
+                "loyalty": 7,
+                "sociability": 5
+            },
+            "relations": {
+                "Alrik": 8,
+                "Sigrid": -3
+            }
+        }
+    ]
+}
