@@ -16,7 +16,7 @@ layout:
 
 ### Paramètres de classe
 
-```
+```json
 {
   "Blueprint": {
     "Name": "BP_SpawnZone",
@@ -56,7 +56,7 @@ layout:
 
 ### Valeurs par défaut de classe
 
-```
+```json
 {
   "BlueprintClass": "BP_SpawnZone",
   "Defaults": {
@@ -124,7 +124,7 @@ layout:
 
 #### EventGraph
 
-```
+```json
 {
   "Blueprint": "BP_SpawnZone",
   "EventGraph": [
@@ -210,7 +210,7 @@ layout:
 
 #### Construction Script
 
-```
+```json
 {
   "Function": "UserConstructionScript",
   "ParentClass": "Actor",
@@ -229,7 +229,7 @@ layout:
 
 #### GetRandomPointInZone
 
-```
+```json
 {
   "Function": "GetRandomPointInZone",
   "Access": "Public",
@@ -258,7 +258,7 @@ layout:
 
 #### StartSpawnLoop
 
-```
+```json
 {
   "Function": {
     "Name": "IsZoneAvailable",
@@ -309,76 +309,200 @@ layout:
 
 ### Variables
 
+#### Box
+
+```json
+{
+  "Variable": {
+    "Name": "Box",
+    "Type": "UBoxComponent",
+    "Category": "Default",
+    "ExposeToCinematics": true,
+    "Visibility": "VisibleAnywhere",
+    "AdvancedProperties": [
+      "BlueprintVisible",
+      "ZeroConstructor",
+      "InstancedReference",
+      "NonTransactional",
+      "NoDestructor",
+      "HasGetValueTypeHash"
+    ],
+    "DefaultValue": "None",
+    "EventsAvailable": [
+      "OnComponentHit",
+      "OnComponentBeginOverlap",
+      "OnComponentEndOverlap",
+      "OnComponentWake",
+      "OnComponentSleep",
+      "OnComponentPhysicsStateChanged",
+      "OnBeginCursorOver",
+      "OnEndCursorOver",
+      "OnClicked",
+      "OnReleased",
+      "OnInputTouchBegin",
+      "OnInputTouchEnd",
+      "OnInputTouchEnter",
+      "OnInputTouchLeave",
+      "PhysicsVolumeChanged",
+      "OnComponentActivated",
+      "OnComponentDeactivated"
+    ]
+  }
+}
+
+```
+
 #### DefaultSceneRoot
 
-<div align="center"><figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption><p>DefaultSceneRoot</p></figcaption></figure></div>
-
-#### SpawnZones
-
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption><p>SpawnZones</p></figcaption></figure>
-
-```
-BPVar(VarName="SpawnZones",VarGuid=99BB1E3747AAB611B223A3B7E2262CCD,VarType=(PinCategory="object",PinSubCategory="",PinSubCategoryObject="/Script/Engine.BlueprintGeneratedClass'/Game/Blueprints/BP_SpawnZone.BP_SpawnZone_C'",PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=Array,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Spawn Zones",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=2053,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=((DataKey="ExposeOnSpawn",DataValue="true")),DefaultValue="")
-```
-
-#### MaxSpawnedActors
-
-<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption><p>MaxSpawnedActors</p></figcaption></figure>
-
-```
-BPVar(VarName="MaxSpawnedActors",VarGuid=E2377D9143074317B09A1F854859A5BE,VarType=(PinCategory="int",PinSubCategory="",PinSubCategoryObject=None,PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=None,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Max Spawned Actors",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="0")
-```
-
-#### SpawnedActors
-
-<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption><p>SpawnedActors</p></figcaption></figure>
-
-```
-BPVar(VarName="SpawnedActors",VarGuid=F49BAD44426F82AECBC9F4B02F29BF14,VarType=(PinCategory="object",PinSubCategory="",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=Array,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Spawned Actors",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=67589,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="")
-```
-
-#### SpawnInterval
-
-<figure><img src=".gitbook/assets/image (4) (1).png" alt=""><figcaption><p>SpawnInterval</p></figcaption></figure>
+```json
+{
+  "Variable": {
+    "Name": "DefaultSceneRoot",
+    "Type": "SceneComponent*",
+    "Access": "Private",
+    "Category": "Default",
+    "CinematicExposure": false,
+    "DefaultValue": "None",
+    "PropertyFlags": [
+      "BlueprintVisible",
+      "ZeroConstructor",
+      "InstancedReference",
+      "NonTransactional",
+      "NoDestructor",
+      "HasGetValueTypeHash"
+    ],
+    "Events": [
+      "OnPhysicsVolumeChanged",
+      "OnComponentActivated",
+      "OnComponentDeactivated"
+    ]
+  }
+}
 
 ```
-BPVar(VarName="SpawnInterval",VarGuid=6A910B7846BC5E1FB72427A4F4F53902,VarType=(PinCategory="real",PinSubCategory="double",PinSubCategoryObject=None,PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=None,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Spawn Interval",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="0.000000")
+
+#### MaxActorsInZone
+
+```json
+{
+  "VariableName": "MaxActorsInZone",
+  "Type": "int",
+  "FriendlyName": "Max Actors in Zone",
+  "Category": "Default",
+  "Tooltip": "Nombre max d’acteurs autorisés dans la zone",
+  "Access": "Private",
+  "InstanceEditable": false,
+  "BlueprintReadOnly": false,
+  "ExposeOnSpawn": false,
+  "ExposeToCinematic": false,
+  "Replication": "None",
+  "ReplicationCondition": "None",
+  "DefaultValue": 0,
+  "AdvancedOptions": {
+    "Config": false,
+    "Transient": false,
+    "SaveGame": false,
+    "Deprecated": false
+  },
+  "EditorFlags": {
+    "CPF_Edit": true,
+    "CPF_BlueprintVisible": true,
+    "CPF_ZeroConstructor": true,
+    "CPF_DisableEditOnInstance": true,
+    "CPF_IsPlainOldData": true,
+    "CPF_NoDestructor": true,
+    "CPF_HasGetValueTypeHash": true
+  }
+}
 ```
 
-#### ActorToSpawn
+#### SpawnedActorsInZone
 
-<figure><img src=".gitbook/assets/image (5) (1).png" alt=""><figcaption><p>ActorToSpawn</p></figcaption></figure>
-
+```json
+{
+  "Variable": "SpawnedActorsInZone",
+  "Type": "Array of Actor",
+  "Access": "Public",
+  "BlueprintExposure": {
+    "EditableInEditor": true,
+    "VisibleInBlueprint": true,
+    "ExposeOnSpawn": false,
+    "ReadOnly": false
+  },
+  "EditableOn": {
+    "Template": false,
+    "Instance": false
+  },
+  "Replication": "None",
+  "Category": "Default",
+  "Tooltip": "Liste des acteurs déjà spawn dans cette zone",
+  "DefaultValue": "Empty Array",
+  "AdvancedFlags": {
+    "Transient": false,
+    "SaveGame": false,
+    "Deprecated": false
+  }
+}
 ```
-BPVar(VarName="ActorToSpawn",VarGuid=1181DFF84F0A322C19672598988B6F54,VarType=(PinCategory="class",PinSubCategory="",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=None,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Actor to Spawn",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="None")
+
+#### bIsZoneEnabled
+
+```json
+{
+  "Variable": "bIsZoneEnabled",
+  "Type": "Bool",
+  "FriendlyName": "Is Zone Enabled",
+  "Category": "Default",
+  "Access": "Public",
+  "Editable": true,
+  "ReadOnly": false,
+  "ExposeOnSpawn": false,
+  "ExposeToCinematic": false,
+  "Replication": "None",
+  "ReplicationCondition": "None",
+  "AdvancedFlags": [
+    "CPF_Edit",
+    "CPF_BlueprintVisible",
+    "CPF_ZeroConstructor",
+    "CPF_DisableEditOnInstance",
+    "CPF_IsPlainOldData",
+    "CPF_NoDestructor",
+    "CPF_HasGetValueTypeHash"
+  ],
+  "DefaultValue": true
+}
 ```
 
-#### bUsePooling
+#### bCooldownOver
 
-<figure><img src=".gitbook/assets/image (6) (1).png" alt=""><figcaption><p>bUsePooling</p></figcaption></figure>
-
+```json
+{
+  "Variable": "bCooldownOver",
+  "Type": "Bool",
+  "FriendlyName": "Cooldown Over",
+  "DefaultValue": true,
+  "Category": "Default",
+  "AccessSpecifier": "Public",
+  "Replication": "None",
+  "Description": "",
+  "Editable": false,
+  "BlueprintReadOnly": false,
+  "ExposeOnSpawn": false,
+  "ExposeToCinematics": false,
+  "Advanced": {
+    "Config": false,
+    "Transient": false,
+    "SaveGame": false,
+    "Obsolete": false
+  },
+  "PropertyFlags": [
+    "CPF_Edit",
+    "CPF_BlueprintVisible",
+    "CPF_ZeroConstructor",
+    "CPF_DisableEditOnInstance",
+    "CPF_IsPlainOldData",
+    "CPF_NoDestructor",
+    "CPF_HasGetValueTypeHash"
+  ]
+}
 ```
-BPVar(VarName="bUsePooling",VarGuid=9084CD3B449C3222CDE389BA35CDEECB,VarType=(PinCategory="bool",PinSubCategory="",PinSubCategoryObject=None,PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=None,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Use Pooling",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=5,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="False")
-```
-
-#### ActorPool
-
-<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption><p>ActorPool</p></figcaption></figure>
-
-```
-BPVar(VarName="ActorPool",VarGuid=EB5307D144D10BAC2C19248F485B3AC0,VarType=(PinCategory="object",PinSubCategory="",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",PinSubCategoryMemberReference=(MemberParent=None,MemberName="",MemberGuid=00000000000000000000000000000000),PinValueType=(TerminalCategory="",TerminalSubCategory="",TerminalSubCategoryObject=None,bTerminalIsConst=False,bTerminalIsWeakPointer=False,bTerminalIsUObjectWrapper=False),ContainerType=Array,bIsReference=False,bIsConst=False,bIsWeakPointer=False,bIsUObjectWrapper=False,bSerializeAsSinglePrecisionFloat=False),FriendlyName="Actor Pool",Category=NSLOCTEXT("KismetSchema", "Default", "Default"),PropertyFlags=67589,RepNotifyFunc="",ReplicationCondition=COND_None,MetaDataArray=,DefaultValue="")
-```
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
-
-####
