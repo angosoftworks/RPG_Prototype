@@ -120,6 +120,141 @@ layout:
 
 ```
 
+### Composants
+
+#### DefaultSceneRoot
+
+```json
+{
+  "Component": "DefaultSceneRoot",
+  "Type": "SceneComponent",
+  "Category": "Par défaut",
+  "EditableWhenInherited": true,
+  "Visible": true,
+  "HiddenInGame": false,
+  "Mobility": "Mobile",
+  "Scale": [1.0, 1.0, 1.0],
+  "Tick": {
+    "StartWithTickEnabled": true,
+    "TickInterval": 0.0,
+    "TickGroup": "During Physics",
+    "AllowTickOnDedicatedServer": true,
+    "TickEvenWhenPaused": false
+  },
+  "Rendering": {
+    "DetailMode": "Low"
+  },
+  "Navigation": {
+    "CanEverAffectNavigation": false
+  },
+  "AdvancedFlags": {
+    "CPF_BlueprintVisible": true,
+    "CPF_ZeroConstructor": true,
+    "CPF_InstancedReference": true,
+    "CPF_NonTransactional": true,
+    "CPF_NoDestructor": true,
+    "CPF_HasGetValueTypeHash": true
+  },
+  "Events": [
+    "PhysicsVolumeChanged",
+    "OnComponentActivated",
+    "OnComponentDeactivated"
+  ]
+}
+```
+
+#### Box
+
+```json
+{
+  "Component": "BoxComponent",
+  "VariableName": "Box",
+  "Category": "Default",
+  "EditableWhenInherited": true,
+  "Transform": {
+    "Translation": [0.0, 0.0, 0.0],
+    "Rotation": [0.0, 0.0, 0.0],
+    "Scale": [1.0, 1.0, 1.0],
+    "Mobility": "Movable"
+  },
+  "Shape": {
+    "BoxExtent": [32.0, 32.0, 32.0],
+    "LineThickness": 0.0,
+    "ShapeColor": [223, 149, 157, 255]
+  },
+  "Collision": {
+    "Profile": "NoCollision",
+    "ObjectType": "WorldStatic",
+    "CollisionResponses": {
+      "Visibility": "Ignore",
+      "Camera": "Ignore",
+      "WorldStatic": "Ignore",
+      "WorldDynamic": "Ignore",
+      "Pawn": "Ignore",
+      "PhysicsBody": "Ignore",
+      "Vehicle": "Ignore",
+      "Destructible": "Ignore"
+    },
+    "GenerateOverlapEvents": false
+  },
+  "Physics": {
+    "SimulatePhysics": false,
+    "EnableGravity": true,
+    "LinearDamping": 0.01,
+    "AngularDamping": 0.0,
+    "Constraints": {
+      "LockPosition": ["X", "Y", "Z"],
+      "LockRotation": ["X", "Y", "Z"]
+    },
+    "ApplyImpulseOnDamage": true,
+    "ReplicatePhysics": true,
+    "Mass": 65.15,
+    "MassScale": 1.0,
+    "SolverIterations": {
+      "Position": 8,
+      "Velocity": 2,
+      "Projection": 1
+    },
+    "StartAwake": true
+  },
+  "Rendering": {
+    "Visible": true,
+    "HiddenInGame": true,
+    "ReflectionCapture": true,
+    "RayTracing": true,
+    "ReceivesDecals": true
+  },
+  "Navigation": {
+    "AffectNavigation": true,
+    "DynamicObstacle": false
+  },
+  "Tick": {
+    "Enabled": true,
+    "Interval": 0.0,
+    "DuringPhysics": true
+  },
+  "Events": [
+    "OnComponentHit",
+    "OnComponentBeginOverlap",
+    "OnComponentEndOverlap",
+    "OnComponentWake",
+    "OnComponentSleep",
+    "OnComponentPhysicsStateChanged",
+    "OnBeginCursorOver",
+    "OnEndCursorOver",
+    "OnClicked",
+    "OnReleased",
+    "OnInputTouchBegin",
+    "OnInputTouchEnd",
+    "OnInputTouchEnter",
+    "OnInputTouchLeave",
+    "PhysicsVolumeChanged",
+    "OnComponentActivated",
+    "OnComponentDeactivated"
+  ]
+}
+```
+
 ### Graphiques
 
 #### EventGraph
@@ -308,78 +443,6 @@ layout:
 ```
 
 ### Variables
-
-#### Box
-
-```json
-{
-  "Variable": {
-    "Name": "Box",
-    "Type": "UBoxComponent",
-    "Category": "Default",
-    "ExposeToCinematics": true,
-    "Visibility": "VisibleAnywhere",
-    "AdvancedProperties": [
-      "BlueprintVisible",
-      "ZeroConstructor",
-      "InstancedReference",
-      "NonTransactional",
-      "NoDestructor",
-      "HasGetValueTypeHash"
-    ],
-    "DefaultValue": "None",
-    "EventsAvailable": [
-      "OnComponentHit",
-      "OnComponentBeginOverlap",
-      "OnComponentEndOverlap",
-      "OnComponentWake",
-      "OnComponentSleep",
-      "OnComponentPhysicsStateChanged",
-      "OnBeginCursorOver",
-      "OnEndCursorOver",
-      "OnClicked",
-      "OnReleased",
-      "OnInputTouchBegin",
-      "OnInputTouchEnd",
-      "OnInputTouchEnter",
-      "OnInputTouchLeave",
-      "PhysicsVolumeChanged",
-      "OnComponentActivated",
-      "OnComponentDeactivated"
-    ]
-  }
-}
-
-```
-
-#### DefaultSceneRoot
-
-```json
-{
-  "Variable": {
-    "Name": "DefaultSceneRoot",
-    "Type": "SceneComponent*",
-    "Access": "Private",
-    "Category": "Default",
-    "CinematicExposure": false,
-    "DefaultValue": "None",
-    "PropertyFlags": [
-      "BlueprintVisible",
-      "ZeroConstructor",
-      "InstancedReference",
-      "NonTransactional",
-      "NoDestructor",
-      "HasGetValueTypeHash"
-    ],
-    "Events": [
-      "OnPhysicsVolumeChanged",
-      "OnComponentActivated",
-      "OnComponentDeactivated"
-    ]
-  }
-}
-
-```
 
 #### MaxActorsInZone
 
