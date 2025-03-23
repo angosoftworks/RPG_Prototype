@@ -1,0 +1,42 @@
+{
+  "Blueprint": {
+    "Name": "BP_SpawnManager",
+    "ParentClass": "AActor",
+    "Interfaces": [],
+    "AdvancedOptions": {"Deprecated": false,"GenerateConstClass": false,"GenerateAbstractClass": false,"ShouldCookPropertyGuides": "Inherit"},
+    "BlueprintOptions": {"RunConstructionScriptOnDrag": true,"RunConstructionScriptInSequence": false},
+    "Defaults": {"MaxSpawnedActors": 0,"SpawnInterval": 0.0,"ActorToSpawn": "None","UsePooling": false},
+    "TickSettings": {"StartWithTickEnabled": true,"TickInterval": 0.0,"AllowTickBeforeBeginPlay": false,"TickEvenWhenPaused": false,"AllowTickOnDedicatedServer": true,"TickGroup": "PrePhysics"},
+    "Replication": {"OnlyRelevantToOwner": false,"AlwaysRelevant": false,"ReplicateMovement": false,"NetLoadOnClient": true,"NetUseOwnerRelevancy": false,"Replicates": false,"NetDormancy": "Awake","NetCullDistanceSquared": 225000000.0,"NetUpdateFrequency": 100.0,"MinNetUpdateFrequency": 2.0,"NetPriority": 1.0,"PhysicsReplicationMode": "Default","ReplicatedMovement": {"LocationQuantizationLevel": "RoundWholeNumber","VelocityQuantizationLevel": "RoundWholeNumber","RotationQuantizationLevel": "ByteComponents"}},
+    "Rendering": {"ActorHiddenInGame": false,"EditorBillboardScale": 1.0,"RelevantForLevelBounds": true},
+    "Collision": {"GenerateOverlapEventsDuringStreaming": false,"UpdateOverlapsMethodDuringStreaming": "UseConfigDefault","DefaultUpdateOverlapsMethodDuringStreaming": "OnlyUpdateMovable"},
+    "ActorSettings": {"CanBeDamaged": true,"InitialLifeSpan": 0.0,"SpawnCollisionHandlingMethod": "AlwaysSpawnIgnoreCollisions","FindCameraComponentWhenViewTarget": true,"IgnoresOriginShifting": false,"CanBeInCluster": false,"PivotOffset": [0.0, 0.0, 0.0]},
+    "InputSettings": {"BlockInput": false,"AutoReceiveInput": "Disabled","InputPriority": 0},
+    "HLOD": {"IncludeActorInHLOD": true,"HLODLayer": "None"},
+    "Physics": {"AsyncPhysicsTickEnabled": false},
+    "WorldPartition": {"RuntimeGrid": "None","IsSpatiallyLoaded": true},
+    "Components": [{"Name": "DefaultSceneRoot","Type": "SceneComponent","Category": "Composants","EditableWhenInherited": true,"Mobility": "Mobile","Scale": [1.0, 1.0, 1.0],"Visibility": {"Visible": true,"HiddenInGame": false},"Tick": {"StartWithTickEnabled": true,"TickInterval": 0.0,"TickGroup": "DuringPhysics","TickOnDedicatedServer": true,"TickEvenWhenPaused": false},"LOD": {"DetailMode": "Low"},"Physics": {"ShouldUpdatePhysicsVolume": false},"Navigation": {"CanAffectNavigation": false},"Replication": {"ReplicateUsingRegisteredSubobjectList": false},"Activation": {"AutoActivate": false},"Events": ["PhysicsVolumeChanged","OnComponentActivated","OnComponentDeactivated"]}],
+    "Variables": [
+      {"Name": "SpawnZones","Type": "Array of BP_SpawnZone_C","Access": "Public","Category": "Default","EditableInstanceOnly": true,"ExposeOnSpawn": true,"BlueprintVisible": true,"DisableEditOnTemplate": true,"Replication": "None","DefaultValue": []},
+      {"Name": "MaxSpawnedActors","Type": "int","Access": "Public","Category": "Default","EditableInstance": true,"DefaultValue": 0},
+      {"Name": "SpawnedActors","Type": "Array<AActor*>","Access": "Public","Category": "Default","BlueprintVisible": true,"EditableInstance": false,"Replication": "None","DefaultValue": []},
+      {"Name": "SpawnInterval","Type": "float","Access": "Public","Category": "Default","EditableInstanceOnly": true,"DefaultValue": 0.0},
+      {"Name": "ActorToSpawn","Type": "Class Reference (Actor)","Access": "Public","Category": "Default","EditableInstance": true,"DefaultValue": "None"},
+      {"Name": "bUsePooling","Type": "bool","Access": "Public","Category": "Default","InstanceEditable": true,"DefaultValue": false},
+      {"Name": "ActorPool","Type": "Array of Actor","Access": "Public","Category": "Default","Editable": true,"DefaultValue": []}
+    ],
+    "Functions": [
+      {"Name": "UserConstructionScript","Type": "FunctionEntry","Access": "Default"},
+      {"Name": "InitializeSpawnZones","Access": "Public","Logic": [{"Type": "CallFunction","Function": "GameplayStatics::GetAllActorsOfClass","Inputs": {"ActorClass": "BP_SpawnZone_C"},"Outputs": {"OutActors": "Array of BP_SpawnZone_C"}}, {"Type": "SetVariable","Variable": "SpawnZones","Value": "OutActors Output"}]},
+      {"Name": "StartSpawnLoop","Access": "Public","Logic": [{"Action": "Get Variable","VariableName": "SpawnZones"},{"Action": "Call Function","Function": "KismetArrayLibrary.Array_Length","Target": "SpawnZones","ReturnType": "int"},{"Action": "Compare","Operation": "Greater_IntInt","A": "Array_Length result","B": 0},{"Action": "Branch","Condition": "A > 0","True": {"CallFunction": "KismetSystemLibrary.K2_SetTimer","Parameters": {"Object": "Self","FunctionName": "SpawnActor","Time": "SpawnInterval","bLooping": true}},"False": {"CallFunction": "KismetSystemLibrary.PrintString","Parameters": {"InString": "No Spawn Zones! Check Initialize"}}}]},
+      {"Name": "SpawnActor","Access": "Public","Logic": [{"Step": "Array_Length","Input": "SpawnedActors","Output": "Length"},{"Step": "GreaterEqual","Inputs": ["Length", "MaxSpawnedActors"],"Output": "Condition"},{"Step": "Branch","Condition": "Condition","Outputs": ["TruePath", "FalsePath"]},{"Step": "Array_Random","Input": "SpawnZones","Output": "RandomSpawnZone","Path": "TruePath"},{"Step": "GetRandomPointInZone","Target": "RandomSpawnZone","Output": "Vector"},{"Step": "Conv_VectorToTransform","Input": "Vector","Output": "Transform"},{"Step": "SpawnActorFromClass","Class": "ActorToSpawn","Transform": "Transform","Output": "SpawnedActor"},{"Step": "Array_Add","Array": "SpawnedActors","Item": "SpawnedActor"}]},
+      {"Name": "GetAvailableZone","Access": "Public","Outputs": [{"Name": "AvailableZone","Type": "BP_SpawnZone_C"}],"Logic": [{"Call": "GetAllActorsOfClass","Params": {"ActorClass": "BP_SpawnZone_C"},"Result": "OutActors[]"},{"Loop": "ForEach OutActors[]","Body": [{"Call": "IsZoneAvailable","Target": "ArrayElement","Result": "IsAvailable"},{"If": "IsAvailable == true","Then": {"Return": "AvailableZone = ArrayElement"}}]}]},
+      {"Name": "RecycleActor","Access": "Public","Inputs": [{"Name": "ActorToRecycle","Type": "Actor"}],"Logic": [{"Node": "SetActorHiddenInGame","Target": "ActorToRecycle","Parameters": {"bNewHidden": true}},{"Node": "SetActorEnableCollision","Target": "ActorToRecycle","Parameters": {"bNewActorEnableCollision": false}},{"Node": "SetActorTickEnabled","Target": "ActorToRecycle","Parameters": {"bEnabled": false}},{"Node": "Array_Add","Parameters": {"TargetArray": "ActorPool","NewItem": "ActorToRecycle"}}]}
+    ],
+    "EventGraph": [
+      {"Event": "ReceiveBeginPlay","Enabled": false,"Comment": "Ce nœud est désactivé et ne sera pas appelé."},
+      {"Event": "ReceiveActorBeginOverlap","Enabled": false,"Comment": "Ce nœud est désactivé et ne sera pas appelé."},
+      {"Event": "ReceiveTick","Enabled": false,"Comment": "Ce nœud est désactivé et ne sera pas appelé."}
+    ]
+  }
+}
