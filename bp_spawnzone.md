@@ -33,43 +33,84 @@ layout:
 #### EventGraph
 
 ```
-Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_0" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Blueprints/BP_SpawnZone.BP_SpawnZone:EventGraph.K2Node_Event_0'"
-   EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveBeginPlay")
-   bOverrideFunction=True
-   EnabledState=Disabled
-   bCommentBubblePinned=True
-   bCommentBubbleVisible=True
-   NodeComment="Ce nœud est désactivé et ne sera pas appelé.\nFaites glisser les broches pour générer des fonctionnalités."
-   NodeGuid=ED6CCDEC4385D22E721F889464245ED8
-   CustomProperties Pin (PinId=F73007BC41D67158EF1EA9993E0FAA11,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveBeginPlay"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-   CustomProperties Pin (PinId=17F539A94DEA195F4CA62BB74C157DAC,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-End Object
-Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_1" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Blueprints/BP_SpawnZone.BP_SpawnZone:EventGraph.K2Node_Event_1'"
-   EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveActorBeginOverlap")
-   bOverrideFunction=True
-   NodePosY=208
-   EnabledState=Disabled
-   bCommentBubblePinned=True
-   bCommentBubbleVisible=True
-   NodeComment="Ce nœud est désactivé et ne sera pas appelé.\nFaites glisser les broches pour générer des fonctionnalités."
-   NodeGuid=2211C61D430D46C92C436F86F30BAD14
-   CustomProperties Pin (PinId=1E8E1DC040DC74A23CA695889BABCDCF,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveActorBeginOverlap"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-   CustomProperties Pin (PinId=C20345314C6199B4015CD493D94BB106,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-   CustomProperties Pin (PinId=EEEE5D2D46F7BE9D424EF39AEF6683FB,PinName="OtherActor",PinToolTip="Other Actor\nActeur Référence d\'objet",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.Actor'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-End Object
-Begin Object Class=/Script/BlueprintGraph.K2Node_Event Name="K2Node_Event_2" ExportPath="/Script/BlueprintGraph.K2Node_Event'/Game/Blueprints/BP_SpawnZone.BP_SpawnZone:EventGraph.K2Node_Event_2'"
-   EventReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveTick")
-   bOverrideFunction=True
-   NodePosY=416
-   EnabledState=Disabled
-   bCommentBubblePinned=True
-   bCommentBubbleVisible=True
-   NodeComment="Ce nœud est désactivé et ne sera pas appelé.\nFaites glisser les broches pour générer des fonctionnalités."
-   NodeGuid=FE1A37A941DF4FE702C9859253332860
-   CustomProperties Pin (PinId=4CC751C54D6EE254457261B1044E6664,PinName="OutputDelegate",Direction="EGPD_Output",PinType.PinCategory="delegate",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="ReceiveTick"),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-   CustomProperties Pin (PinId=468648D44F645B583CF5198230ADA4A9,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-   CustomProperties Pin (PinId=3AF45CD549163AA3AECF71B34F6ED972,PinName="DeltaSeconds",PinToolTip="Delta Seconds\nFloat (simple précision)",Direction="EGPD_Output",PinType.PinCategory="real",PinType.PinSubCategory="float",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,DefaultValue="0.0",AutogeneratedDefaultValue="0.0",PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-End Object
+{
+  "Blueprint": "BP_SpawnZone",
+  "EventGraph": [
+    {
+      "Event": "ReceiveBeginPlay",
+      "ParentClass": "Actor",
+      "OverrideFunction": true,
+      "Enabled": false,
+      "Comment": "Ce nœud est désactivé et ne sera pas appelé. Faites glisser les broches pour générer des fonctionnalités.",
+      "Pins": [
+        {
+          "Name": "OutputDelegate",
+          "Type": "delegate",
+          "Direction": "output"
+        },
+        {
+          "Name": "then",
+          "Type": "exec",
+          "Direction": "output"
+        }
+      ]
+    },
+    {
+      "Event": "ReceiveActorBeginOverlap",
+      "ParentClass": "Actor",
+      "OverrideFunction": true,
+      "Enabled": false,
+      "PositionY": 208,
+      "Comment": "Ce nœud est désactivé et ne sera pas appelé. Faites glisser les broches pour générer des fonctionnalités.",
+      "Pins": [
+        {
+          "Name": "OutputDelegate",
+          "Type": "delegate",
+          "Direction": "output"
+        },
+        {
+          "Name": "then",
+          "Type": "exec",
+          "Direction": "output"
+        },
+        {
+          "Name": "OtherActor",
+          "Type": "object",
+          "SubType": "Actor",
+          "Direction": "output",
+          "Tooltip": "Other Actor - Acteur Référence d'objet"
+        }
+      ]
+    },
+    {
+      "Event": "ReceiveTick",
+      "ParentClass": "Actor",
+      "OverrideFunction": true,
+      "Enabled": false,
+      "PositionY": 416,
+      "Comment": "Ce nœud est désactivé et ne sera pas appelé. Faites glisser les broches pour générer des fonctionnalités.",
+      "Pins": [
+        {
+          "Name": "OutputDelegate",
+          "Type": "delegate",
+          "Direction": "output"
+        },
+        {
+          "Name": "then",
+          "Type": "exec",
+          "Direction": "output"
+        },
+        {
+          "Name": "DeltaSeconds",
+          "Type": "float",
+          "Direction": "output",
+          "Default": "0.0",
+          "Tooltip": "Delta Seconds - Float (simple précision)"
+        }
+      ]
+    }
+  ]
+}
 
 ```
 
@@ -78,12 +119,20 @@ End Object
 #### Construction Script
 
 ```
-Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Blueprints/BP_SpawnZone.BP_SpawnZone:UserConstructionScript.K2Node_FunctionEntry_0'"
-   FunctionReference=(MemberParent="/Script/CoreUObject.Class'/Script/Engine.Actor'",MemberName="UserConstructionScript")
-   NodeGuid=02CAB43B4192F7259AA3EE8779581BEE
-   CustomProperties Pin (PinId=3AFB107A415A97D5173C18BB518022EE,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
-End Object
-
+{
+  "Function": "UserConstructionScript",
+  "ParentClass": "Actor",
+  "Type": "FunctionEntry",
+  "Access": "Public",
+  "Pure": false,
+  "CompactNodeTitle": null,
+  "CallInEditor": false,
+  "Inputs": [],
+  "Outputs": [
+    { "Type": "exec", "Name": "then" }
+  ],
+  "Notes": "Construction Script spécifique aux Actors, appelé lors de la construction de l'acteur."
+}
 ```
 
 #### GetRandomPointInZone
@@ -113,7 +162,6 @@ End Object
     "Return Vector"
   ]
 }
-
 ```
 
 #### StartSpawnLoop
@@ -165,7 +213,6 @@ End Object
     ]
   }
 }
-
 ```
 
 ### Variables
