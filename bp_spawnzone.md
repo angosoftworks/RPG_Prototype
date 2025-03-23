@@ -391,7 +391,7 @@ layout:
 }
 ```
 
-#### StartSpawnLoop
+#### isZoneAvailable
 
 ```json
 {
