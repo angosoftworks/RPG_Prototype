@@ -133,6 +133,66 @@ layout:
 }
 ```
 
+### Composants
+
+#### DefaultSceneRoot
+
+```json
+{
+  "Component": {
+    "Name": "DefaultSceneRoot",
+    "Type": "SceneComponent",
+    "Category": "Composants",
+    "EditableWhenInherited": true,
+    "Mobility": "Mobile",
+    "Scale": [1.0, 1.0, 1.0],
+    "Visibility": {
+      "Visible": true,
+      "HiddenInGame": false
+    },
+    "Tick": {
+      "StartWithTickEnabled": true,
+      "TickInterval": 0.0,
+      "TickGroup": "DuringPhysics",
+      "TickOnDedicatedServer": true,
+      "TickEvenWhenPaused": false
+    },
+    "LOD": {
+      "DetailMode": "Low"
+    },
+    "Physics": {
+      "ShouldUpdatePhysicsVolume": false
+    },
+    "Navigation": {
+      "CanAffectNavigation": false
+    },
+    "Replication": {
+      "ReplicateUsingRegisteredSubobjectList": false
+    },
+    "Activation": {
+      "AutoActivate": false
+    },
+    "Events": [
+      "PhysicsVolumeChanged",
+      "OnComponentActivated",
+      "OnComponentDeactivated"
+    ],
+    "AdvancedProperties": {
+      "ExposeToCinematic": false,
+      "Access": "Private",
+      "CPF": {
+        "BlueprintVisible": true,
+        "ZeroConstructor": true,
+        "InstancedReference": true,
+        "NonTransactional": true,
+        "NoDestructor": true,
+        "HasGetValueTypeHash": true
+      }
+    }
+  }
+}
+```
+
 ### Graphiques
 
 #### EventGraph
