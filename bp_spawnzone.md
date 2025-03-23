@@ -16,17 +16,109 @@ layout:
 
 ### Paramètres de classe
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>BP_SpawnZone - Paramètres de classe</p></figcaption></figure>
+```
+{
+  "Blueprint": {
+    "Name": "BP_SpawnZone",
+    "ParentClass": "Actor",
+    "AdvancedOptions": {
+      "Deprecated": false,
+      "GenerateConstClass": false,
+      "GenerateAbstractClass": false,
+      "ShouldCookPropertyGuides": "Inherit"
+    },
+    "BlueprintOptions": {
+      "RunConstructionScriptOnDrag": true,
+      "RunConstructionScriptInSequence": false,
+      "DisplayName": "",
+      "Description": "",
+      "Namespace": "",
+      "Category": "",
+      "HideCategories": []
+    },
+    "Interfaces": {
+      "ImplementedInterfaces": [
+        "BPI_SpawnZone"
+      ],
+      "InheritedInterfaces": []
+    },
+    "Imports": {
+      "DefaultNamespaces": [],
+      "ImportedNamespaces": []
+    },
+    "Variables": [],
+    "Functions": [],
+    "Events": []
+  }
+}
+
+```
 
 ### Valeurs par défaut de classe
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>BP_SpawnZone - Valeurs par défaut de classe pt1</p></figcaption></figure>
+```
+{
+  "BlueprintClass": "BP_SpawnZone",
+  "Defaults": {
+    "MaxActorsInZone": 0,
+    "IsZoneEnabled": true,
+    "CooldownOver": true
+  },
+  "TickSettings": {
+    "StartWithTickEnabled": true,
+    "TickInterval": 0.0,
+    "AllowTickBeforeBeginPlay": false,
+    "TickEvenWhenPaused": false,
+    "AllowTickOnDedicatedServer": true,
+    "TickGroup": "PrePhysics"
+  },
+  "Replication": {
+    "OnlyRelevantToOwner": false,
+    "AlwaysRelevant": false,
+    "ReplicateMovement": false,
+    "NetLoadOnClient": true,
+    "NetUseOwnerRelevancy": false,
+    "Replicates": false,
+    "NetDormancy": "Awake",
+    "NetCullDistanceSquared": 225000000.0,
+    "NetUpdateFrequency": 100.0,
+    "MinNetUpdateFrequency": 2.0,
+    "NetPriority": 1.0,
+    "PhysicsReplicationMode": "Default",
+    "CallPreReplication": true,
+    "CallPreReplicationForReplay": false,
+    "ReplayRewindable": false
+  },
+  "Rendering": {
+    "ActorHiddenInGame": false,
+    "EditorBillboardScale": 1.0
+  },
+  "Collision": {
+    "GenerateOverlapEventsDuringStreaming": false,
+    "UpdateOverlapsMethodDuringStreaming": "UseConfigDefault",
+    "RelevantForLevelBounds": true
+  },
+  "Actor": {
+    "CanBeDamaged": true,
+    "InitialLifeSpan": 0.0,
+    "SpawnCollisionHandling": "AlwaysSpawnIgnoreCollisions",
+    "FindCameraComponentWhenViewTarget": true
+  },
+  "HLOD": {
+    "IncludeActorInHLOD": true
+  },
+  "Physics": {
+    "AsyncPhysicsTickEnabled": false
+  },
+  "WorldPartition": {
+    "IsSpatiallyLoaded": true
+  },
+  "DataLayers": {
+    "ExternalDataLayerAsset": null
+  }
+}
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>BP_SpawnZone - Valeurs par défaut de classe pt2</p></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption><p>BP_SpawnZone - Valeurs par défaut de classe pt3</p></figcaption></figure>
-
-<figure><img src=".gitbook/assets/image (5).png" alt=""><figcaption><p>BP_SpawnZone - Valeurs par défaut de classe pt4</p></figcaption></figure>
+```
 
 ### Graphiques
 
