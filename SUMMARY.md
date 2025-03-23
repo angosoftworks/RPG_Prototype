@@ -103,8 +103,12 @@
 
 ***
 
+* [BP\_PNJ\_AIController](bp_pnj_aicontroller.md)
 * [BP\_SpawnManager](bp_spawnmanager.md)
 * [BP\_SpawnZone](bp_spawnzone.md)
+* [Struct\_PNJData](struct_pnjdata.md)
+* [Struct\_PNJTraits](struct_pnjtraits.md)
+* [Struct\_RelationEntry](struct_relationentry.md)
 
 ## Concepts
 
